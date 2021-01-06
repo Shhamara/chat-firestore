@@ -15,6 +15,10 @@
 		0410271525A502EB008A64C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0410271325A502EB008A64C6 /* LaunchScreen.storyboard */; };
 		0410272025A502EB008A64C6 /* FireChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410271F25A502EB008A64C6 /* FireChatTests.swift */; };
 		0410272B25A502EB008A64C6 /* FireChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410272A25A502EB008A64C6 /* FireChatUITests.swift */; };
+		0410274425A5049F008A64C6 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410274325A5049F008A64C6 /* ConversationsController.swift */; };
+		0410274A25A51269008A64C6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410274925A51269008A64C6 /* LoginController.swift */; };
+		0410274F25A51272008A64C6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410274E25A51272008A64C6 /* RegistrationController.swift */; };
+		0410276C25A51638008A64C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410276B25A51638008A64C6 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		0410272625A502EB008A64C6 /* FireChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0410272A25A502EB008A64C6 /* FireChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChatUITests.swift; sourceTree = "<group>"; };
 		0410272C25A502EB008A64C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0410274325A5049F008A64C6 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		0410274925A51269008A64C6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0410274E25A51272008A64C6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		0410276B25A51638008A64C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,12 @@
 		0410270725A502E9008A64C6 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
+				0410274125A5030A008A64C6 /* Model */,
+				0410274025A50308008A64C6 /* View */,
+				0410273F25A50307008A64C6 /* ViewModel */,
+				0410273E25A50305008A64C6 /* Controller */,
+				0410273D25A50303008A64C6 /* API */,
+				0410274225A50364008A64C6 /* Utils */,
 				0410270825A502E9008A64C6 /* AppDelegate.swift */,
 				0410270A25A502E9008A64C6 /* SceneDelegate.swift */,
 				0410270C25A502E9008A64C6 /* ViewController.swift */,
@@ -126,6 +140,60 @@
 				0410272C25A502EB008A64C6 /* Info.plist */,
 			);
 			path = FireChatUITests;
+			sourceTree = "<group>";
+		};
+		0410273D25A50303008A64C6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0410273E25A50305008A64C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0410274825A5125A008A64C6 /* Auth */,
+				0410274325A5049F008A64C6 /* ConversationsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0410273F25A50307008A64C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0410274025A50308008A64C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0410274125A5030A008A64C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0410274225A50364008A64C6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0410276B25A51638008A64C6 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0410274825A5125A008A64C6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0410274925A51269008A64C6 /* LoginController.swift */,
+				0410274E25A51272008A64C6 /* RegistrationController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +328,11 @@
 			files = (
 				0410270D25A502E9008A64C6 /* ViewController.swift in Sources */,
 				0410270925A502E9008A64C6 /* AppDelegate.swift in Sources */,
+				0410274425A5049F008A64C6 /* ConversationsController.swift in Sources */,
 				0410270B25A502E9008A64C6 /* SceneDelegate.swift in Sources */,
+				0410274F25A51272008A64C6 /* RegistrationController.swift in Sources */,
+				0410274A25A51269008A64C6 /* LoginController.swift in Sources */,
+				0410276C25A51638008A64C6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
