@@ -18,30 +18,41 @@ class LoginController: UIViewController {
         return iv
     }()
     
-    private let emailContainerView: UIView = {
-        let view = UIView()
-        view.setHeight(height: 50)
-        view.backgroundColor = .cyan
-        return view
+    private lazy var emailContainerView: UIView = {
+        return InputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: emailTextField)
     }()
     
-    private let passwordContainerView: UIView = {
-        let view = UIView()
-        view.setHeight(height: 50)
-        view.backgroundColor = .yellow
-        return view
+    private lazy var passwordContainerView: InputContainerView = {
+        return InputContainerView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: passwordTextField)
     }()
     
     private let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
         button.layer.cornerRadius = 5
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.backgroundColor = .red
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        button.setTitleColor(.white, for: .normal)
         button.setHeight(height: 50)
         return button
     }()
     
+    private let emailTextField = CustomTextField(placeholder: "Email")
+    
+    private let passwordTextField = CustomTextField(placeholder: "Password",
+                                                    isSecureInput: true)
+    
+    private let dontHaveAccButton: UIButton = {
+        let button = UIButton()
+        
+        let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ",
+                                                        attributes: [.font: UIFont.systemFont(ofSize: 16),
+                                                                     .foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: "Sign Up",
+                                                  attributes: [.font: UIFont.boldSy(ofSize: 16), .foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedTitle, for: <#UIControl.State#>)
+        return button
+    }()
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
