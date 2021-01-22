@@ -16,6 +16,7 @@ class ActionButton: UIButton {
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         setTitleColor(.white, for: .normal)
+        isEnabled = false
         setHeight(height: 50)
     }
     
